@@ -1,0 +1,632 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* shorcut 模块 */
+
+.shortcut .w .right li .red {
+    color: #f10215;
+}
+
+.shortcut {
+    height: 30px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+
+.shortcut .left a {
+    padding-left: 10px;
+    display: block;
+    height: 30px;
+    width: 70px;
+    color: #999;
+    z-index: 10;
+}
+
+.selected {
+    border-left: 1px solid #e3e4e5;
+    border-right: 1px solid #e3e4e5;
+}
+
+.shortcut a:hover {
+    color: #f10215;
+}
+
+.shortcut .left {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 27px;
+}
+
+.shortcut .left i::after {
+    content: '\e922';
+    font-family: 'icomoon';
+    color: #f10215;
+    font-size: 14px;
+}
+
+.shortcut .left .shortcut_btns {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    position: relative;
+    width: 324px;
+    height: 320px;
+    padding: 10px;
+    z-index: 999;
+}
+
+.shortcut .left .shortcut_btns .areas_split {
+    position: absolute;
+    width: 262px;
+    height: 0;
+    top: 228px;
+    margin-left: 10px;
+    border-bottom: 1px dotted #eee
+}
+
+.shortcut .left .shortcut_btns .areas ul li {
+    float: left;
+    width: 60px;
+}
+
+.shortcut .left .shortcut_btns .areas ul li a {
+    text-align: center;
+    width: 46px;
+    padding: 0 4px;
+}
+
+.shortcut .left .shortcut_btns .areas ul li a:hover {
+    background-color: #e3e4e5;
+    color: #e33333;
+}
+
+.shortcut .left .shortcut_btns .areas_else {
+    position: absolute;
+    height: 100px;
+    top: 230px;
+}
+
+.shortcut .left .shortcut_btns .areas_else p {
+    padding-left: 8px;
+}
+
+.shortcut .left .shortcut_btns .areas_else ul li {
+    float: left;
+    width: 120px;
+}
+
+.shortcut .left .shortcut_btns .areas_else ul li a {
+    width: 100px;
+    padding: 0 8px;
+}
+
+.shortcut .right {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+}
+
+.shortcut .right li {
+    height: 30px;
+    margin-left: 3px;
+    margin-right: 2px;
+    padding-left: 8px;
+    padding-right: 15px;
+    float: left;
+}
+
+.shortcut .right li a {
+    color: #999;
+}
+
+.shortcut .right li a:hover {
+    color: #f10215;
+}
+
+.shortcut .right .spacer {
+    padding: 0;
+    margin: 10px 2px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
+
+.shortcut .right .my_jd {
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: 265px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    width: 280px;
+    padding: 5px;
+    z-index: 99;
+}
+
+.shortcut .right .my_jd .above {
+    width: 280px;
+    height: 90px;
+}
+
+.shortcut .right .my_jd .above li {
+    width: 100px;
+    float: left;
+}
+
+.shortcut .right .my_jd .under {
+    width: 280px;
+    height: 50px;
+}
+
+.shortcut .right .my_jd .under li {
+    width: 100px;
+    float: left;
+}
+
+.shortcut .right .my_jd .my_jd_split {
+    position: absolute;
+    width: 260px;
+    height: 0;
+    top: 92px;
+    border-bottom: 1px dotted #eee
+}
+
+.shortcut .right .enterprise {
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: 429px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    width: 170px;
+    padding: 0 5px;
+    z-index: 99;
+}
+
+.shortcut .right .enterprise li {
+    height: 27px;
+    padding: 0;
+    margin: 0 5px;
+    width: 68px;
+    float: left;
+}
+
+.shortcut .right .enterprise h6 a {
+    color: #999;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.shortcut .right .tail::after {
+    position: absolute;
+    content: '\e91e';
+    font-family: 'icomoon';
+    margin: 1px 2px 0;
+}
+
+
+/* header 模块 */
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    height: 140px;
+}
+
+.header .w {
+    position: relative;
+}
+
+.header .logo a {
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+    background: url('../img/sprite.png') no-repeat;
+    width: 190px;
+    height: 120px;
+}
+
+.header .logo_gif a {
+    position: absolute;
+    display: none;
+    margin-top: 10px;
+    width: 190px;
+    height: 120px;
+    text-align: center;
+}
+
+.header .logo_gif a img {
+    height: 120px;
+}
+
+.header .search {
+    position: absolute;
+    width: 550px;
+    height: 36px;
+    top: 25px;
+    left: 300px;
+}
+
+.header .search input {
+    padding: 2px 44px 2px 17px;
+    width: 546px;
+    height: 34px;
+    border: 2px solid #e2231a;
+    line-height: 26px;
+    font-size: 12px;
+    outline: none;
+}
+
+.header .search .btn {
+    position: absolute;
+    border-radius: 0;
+    right: 5px;
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    border: none;
+    background-color: #e1251b;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header .search .btn::after {
+    content: '\e986';
+    font-family: 'icomoon';
+}
+
+.header .cw-icon {
+    position: absolute;
+    right: 200px;
+    top: 25px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 34px;
+    border: 1px solid #eee;
+    width: 130px;
+    height: 34px;
+    padding-left: 20px;
+}
+
+.header .cw-icon a {
+    color: #e1251b;
+}
+
+.header .cw-icon i {
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    display: inline-block;
+    padding: 1px 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #e1251b;
+    border-radius: 7px;
+    min-width: 12px;
+    text-align: center;
+}
+
+.header .cw-icon a::before {
+    position: absolute;
+    left: 14px;
+    content: '\e93a';
+    font-family: 'icomoon';
+}
+
+.header .erweima {
+    position: absolute;
+    right: 0px;
+}
+
+.header .erweima img {
+    width: 130px;
+    height: 130px;
+}
+
+.header .hotwords {
+    position: absolute;
+    top: 65px;
+    left: 300px;
+}
+
+.header .hotwords ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.header .hotwords ul li a {
+    color: #999;
+}
+
+.header .hotwords ul li a:hover {
+    color: #e33333;
+}
+
+.header .hotwords ul li .red {
+    color: #f10215;
+}
+
+.header .navitems {
+    overflow: hidden;
+    position: absolute;
+    left: 230px;
+    height: 40px;
+    top: 100px;
+}
+
+.header .navitems ul li {
+    float: left;
+}
+
+.header .navitems ul li a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    color: #333;
+    margin: 0 11px;
+}
+
+.header .navitems ul li .red {
+    color: #e1251b;
+    font-weight: 700;
+}
+
+.header .navitems ul li a:hover {
+    color: #e1251b;
+}
+
+
+/* footer模块 */
+
+.footer {
+    padding-top: 30px;
+    position: relative;
+    height: 565px;
+}
+
+.footer .footer_head {
+    border-bottom: 1px solid #dedede;
+    height: 103px;
+}
+
+.footer .footer_head .w ul li {
+    float: left;
+    width: 297px;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.footer .footer_head .w ul li h5 {
+    float: left;
+    display: block;
+}
+
+.footer .footer_head .w ul li .duo {
+    width: 36px;
+    height: 42px;
+    background: url('../img/footer-sp.png') no-repeat 0 -192px;
+}
+
+.footer .footer_head .w ul li .kuai {
+    width: 36px;
+    height: 42px;
+    background: url('../img/footer-sp.png') no-repeat -41px -192px;
+}
+
+.footer .footer_head .w ul li .hao {
+    width: 36px;
+    height: 42px;
+    background: url('../img/footer-sp.png') no-repeat -82px -192px;
+}
+
+.footer .footer_head .w ul li .sheng {
+    width: 36px;
+    height: 42px;
+    background: url('../img/footer-sp.png') no-repeat -123px -192px;
+}
+
+.footer .footer_head .w ul li p {
+    margin-left: 10px;
+    float: left;
+    overflow: hidden;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+}
+
+.footer .w .mod {
+    height: 190px;
+    border-bottom: 1px solid #dedede;
+}
+
+.footer .w .mod .mod_help {
+    padding: 20px 0;
+    float: left;
+    width: 198px;
+}
+
+.footer .w .mod .mod_help h5 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer .w .mod .mod_help ul li {
+    padding: 1px 0;
+}
+
+.footer .w .mod .mod_notice {
+    padding: 20px 0;
+    float: left;
+    width: 200px;
+}
+
+.footer .w .mod .mod_notice h5 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer .w .mod .mod_notice p {
+    width: 180px;
+}
+
+.footer .w .mod .mod_notice a {
+    float: right;
+}
+
+.footer .w .mod .mod_notice a::after {
+    content: '\e920';
+    font-family: 'icomoon';
+}
+
+.footer .w .mod_copyright {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer .w .mod_copyright p span {
+    padding: 0 9px;
+    color: #ccc;
+}
+
+.footer .w .mod_copyright_info {
+    text-align: center;
+}
+
+.footer .w .mod_copyright_info p {
+    padding: 3px 0;
+}
+
+.footer .w .mod_copyright_info span {
+    padding: 0 5px;
+}
+
+.footer .w .mod_copyright_info a,
+.footer .w .mod_copyright_info i,
+.footer .w .mod_copyright_info span {
+    color: #999;
+}
+
+.footer .w .mod_copyright_info .foreign i {
+    margin-right: 5px;
+}
+
+.footer .w .mod_copyright_info .foreign i:nth-child(1) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -108px -155px;
+    width: 15px;
+    height: 12px;
+}
+
+.footer .w .mod_copyright_info .foreign i:nth-child(4) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -168px -155px;
+    width: 15px;
+    height: 12px;
+}
+
+.footer .w .mod_copyright_info .foreign i:nth-child(7) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -148px -155px;
+    width: 15px;
+    height: 12px;
+}
+
+.footer .w .mod_copyright_info .foreign i:nth-child(10) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -128px -155px;
+    width: 15px;
+    height: 12px;
+}
+
+.footer .w .mod_copyright_info .foreign i:nth-child(13) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -108px -172px;
+    width: 15px;
+    height: 12px;
+}
+
+.footer .w .mod_copyright_info a:hover {
+    color: #c81623;
+}
+
+.footer .w .mod_copyright_auth {
+    margin: 25px 0;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.footer .w .mod_copyright_auth a:nth-child(1) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -205px -111px;
+    width: 103px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.footer .w .mod_copyright_auth a:nth-child(2) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -205px -74px;
+    width: 103px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.footer .w .mod_copyright_auth a:nth-child(3) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -205px -37px;
+    width: 103px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.footer .w .mod_copyright_auth a:nth-child(4) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -206px 0px;
+    width: 103px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.footer .w .mod_copyright_auth a:nth-child(5) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat 0px -155px;
+    width: 103px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.footer .w .mod_copyright_auth a:nth-child(6) {
+    display: inline-block;
+    background: url('../img/footer-sp.png') no-repeat -206px -148px;
+    width: 103px;
+    line-height: 32px;
+    height: 32px;
+}
